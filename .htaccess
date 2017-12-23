@@ -1,0 +1,12 @@
+RewriteEngine On
+
+<IFModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+	RewriteBase /
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI}  ^/([^/]+)/?([^/]*)?/?([^/]*)?/?([^/]*)?/?    [NC]
+	RewriteRule .*    index.php?page1=%1&page2=%2&page3=%3&page4=%4 [L]
+</IFModule>
