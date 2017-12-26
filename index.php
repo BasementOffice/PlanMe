@@ -32,5 +32,5 @@ switch ($_GET['page1']) {
     case 'events': {
       include_once($_SERVER['DOCUMENT_ROOT'] . '/lib/pages/events.php');
     break;}
-  }
+}
 ?>
